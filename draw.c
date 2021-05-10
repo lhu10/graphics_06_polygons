@@ -154,7 +154,7 @@ void add_sphere( struct matrix * polygons,
       index = lat * (steps) + longt;
       
       int p = index; 
-      int p1 = p+1;
+      int p1 = (p+1) % (steps*(steps-1));
       int pn1 = (p + steps + 1) % (steps*(steps-1)); 
       int pn = (p + steps) % (steps*(steps-1)); 
       if(longt != steps-1){
